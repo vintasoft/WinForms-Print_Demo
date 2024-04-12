@@ -229,7 +229,7 @@ namespace PrintDemo
         #region 'File' menu
 
         /// <summary>
-        /// Handles the Click event of OpenToolStripMenuItem object.
+        /// Handles the Click event of openToolStripMenuItem object.
         /// </summary>
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -258,7 +258,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the Click event of AddToolStripMenuItem object.
+        /// Handles the Click event of addToolStripMenuItem object.
         /// </summary>
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -274,7 +274,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the Click event of DocxLayoutSettingsToolStripMenuItem object.
+        /// Handles the Click event of docxLayoutSettingsToolStripMenuItem object.
         /// </summary>
         private void docxLayoutSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -282,7 +282,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the Click event of XlsxLayoutSettingsToolStripMenuItem object.
+        /// Handles the Click event of xlsxLayoutSettingsToolStripMenuItem object.
         /// </summary>
         private void xlsxLayoutSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -290,7 +290,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the Click event of PageSettingsToolStripMenuItem object.
+        /// Handles the Click event of pageSettingsToolStripMenuItem object.
         /// </summary>
         private void pageSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -301,7 +301,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the Click event of PrintColorManagementToolStripMenuItem object.
+        /// Handles the Click event of printColorManagementToolStripMenuItem object.
         /// </summary>
         private void printColorManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -310,7 +310,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the Click event of PrintToolStripMenuItem object.
+        /// Handles the Click event of printToolStripMenuItem object.
         /// </summary>
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -342,7 +342,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ExitToolStripMenuItem object.
+        /// Handles the Click event of exitToolStripMenuItem object.
         /// </summary>
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -355,7 +355,7 @@ namespace PrintDemo
         #region 'View' menu
 
         /// <summary>
-        /// Handles the Click event of ColorManagementToolStripMenuItem object.
+        /// Handles the Click event of colorManagementToolStripMenuItem object.
         /// </summary>
         private void colorManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -380,7 +380,7 @@ namespace PrintDemo
         #region 'Page' menu
 
         /// <summary>
-        /// Handles the Click event of ShowPageHeaderToolStripMenuItem object.
+        /// Handles the Click event of showPageHeaderToolStripMenuItem object.
         /// </summary>
         private void showPageHeaderToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -392,7 +392,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ShowPageFooterToolStripMenuItem object.
+        /// Handles the Click event of showPageFooterToolStripMenuItem object.
         /// </summary>
         private void showPageFooterToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -404,7 +404,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ShowImageHeaderToolStripMenuItem object.
+        /// Handles the Click event of showImageHeaderToolStripMenuItem object.
         /// </summary>
         private void showImageHeaderToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -416,7 +416,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ShowImageFooterToolStripMenuItem object.
+        /// Handles the Click event of showImageFooterToolStripMenuItem object.
         /// </summary>
         private void showImageFooterToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -428,7 +428,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ShowImageRectToolStripMenuItem object.
+        /// Handles the Click event of showImageRectToolStripMenuItem object.
         /// </summary>
         private void showImageRectToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -445,7 +445,7 @@ namespace PrintDemo
         #region 'Help' menu
 
         /// <summary>
-        /// Handles the Click event of AboutToolStripMenuItem object.
+        /// Handles the Click event of aboutToolStripMenuItem object.
         /// </summary>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -461,7 +461,7 @@ namespace PrintDemo
         #region Context menu
 
         /// <summary>
-        /// Handles the Click event of PrintImageMenuItem object.
+        /// Handles the Click event of printImageMenuItem object.
         /// </summary>
         private void printImageMenuItem_Click(object sender, EventArgs e)
         {
@@ -494,7 +494,7 @@ namespace PrintDemo
         #region Print settings
 
         /// <summary>
-        /// Handles the SelectedValueChanged event of ScaleModeComboBox object.
+        /// Handles the SelectedValueChanged event of scaleModeComboBox object.
         /// </summary>
         private void scaleModeComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -517,7 +517,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the CheckedChanged event of CenterImageOnPageCheckBox object.
+        /// Handles the CheckedChanged event of centerImageOnPageCheckBox object.
         /// </summary>
         private void centerImageOnPageCheckBox_CheckedChanged(object sender, EventArgs e)
         {
@@ -528,7 +528,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the CheckedChanged event of ImageAutoOrientationCheckBox object.
+        /// Handles the CheckedChanged event of imageAutoOrientationCheckBox object.
         /// </summary>
         private void imageAutoOrientationCheckBox_CheckedChanged(object sender, EventArgs e)
         {
@@ -539,7 +539,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the CheckedChanged event of PrintImageWithAnnotationsCheckBox object.
+        /// Handles the CheckedChanged event of printImageWithAnnotationsCheckBox object.
         /// </summary>
         private void printImageWithAnnotationsCheckBox_CheckedChanged(object sender, EventArgs e)
         {
@@ -555,7 +555,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the ValueChanged event of ColumnsOnPageNumericUpDown object.
+        /// Handles the ValueChanged event of columnsOnPageNumericUpDown object.
         /// </summary>
         private void columnsOnPageNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
@@ -567,7 +567,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the ValueChanged event of RowsOnPageNumericUpDown object.
+        /// Handles the ValueChanged event of rowsOnPageNumericUpDown object.
         /// </summary>
         private void rowsOnPageNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
@@ -579,7 +579,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ImagesPerPageUpdateButton object.
+        /// Handles the Click event of imagesPerPageUpdateButton object.
         /// </summary>
         private void imagesPerPageUpdateButton_Click(object sender, EventArgs e)
         {
@@ -593,7 +593,7 @@ namespace PrintDemo
         #region Thumbnail viewer
 
         /// <summary>
-        /// Handles the ImageCollectionChanged event of Images property of ThumbnailViewer1 object.
+        /// Handles the Images_ImageCollectionChanged event of thumbnailViewer1 object.
         /// </summary>
         private void thumbnailViewer1_Images_ImageCollectionChanged(object sender, ImageCollectionChangeEventArgs e)
         {
@@ -601,7 +601,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the AnnotationDataDeserializationException event of AnnotationDataController property of ThumbnailViewer1 object.
+        /// Handles the AnnotationDataController_AnnotationDataDeserializationException event of thumbnailViewer1 object.
         /// </summary>
         private void thumbnailViewer1_AnnotationDataController_AnnotationDataDeserializationException(object sender, Vintasoft.Imaging.Annotation.AnnotationDataDeserializationExceptionEventArgs e)
         {
@@ -609,7 +609,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the FocusedIndexChanged event of ThumbnailViewer1 object.
+        /// Handles the FocusedIndexChanged event of thumbnailViewer1 object.
         /// </summary>
         private void thumbnailViewer1_FocusedIndexChanged(object sender, FocusedIndexChangedEventArgs e)
         {
@@ -632,7 +632,7 @@ namespace PrintDemo
         #region Print preview control
 
         /// <summary>
-        /// Handles the StartPageChanged event of PrintPreviewControl1 object.
+        /// Handles the StartPageChanged event of printPreviewControl1 object.
         /// </summary>
         private void printPreviewControl1_StartPageChanged(object sender, EventArgs e)
         {
@@ -644,7 +644,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the ValueChanged event of ZoomTrackBar object.
+        /// Handles the ValueChanged event of zoomTrackBar object.
         /// </summary>
         private void zoomTrackBar_ValueChanged(object sender, EventArgs e)
         {
@@ -654,7 +654,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the ValueChanged event of PageIndexNumericUpDown object.
+        /// Handles the ValueChanged event of pageIndexNumericUpDown object.
         /// </summary>
         private void pageIndexNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
@@ -667,7 +667,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the ValueChanged event of VisibleColumnCountNumericUpDown object.
+        /// Handles the ValueChanged event of visibleColumnCountNumericUpDown object.
         /// </summary>
         private void visibleColumnCountNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
@@ -676,7 +676,7 @@ namespace PrintDemo
         }
 
         /// <summary>
-        /// Handles the ValueChanged event of VisibleRowCountNumericUpDown object.
+        /// Handles the ValueChanged event of visibleRowCountNumericUpDown object.
         /// </summary>
         private void visibleRowCountNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
