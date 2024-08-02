@@ -12,7 +12,7 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>    
     <EnableDefaultItems>false</EnableDefaultItems>
-    <Version>12.4.10.1</Version>
+    <Version>12.5.0.1</Version>
     <AssemblyName>PrintDemo</AssemblyName>
     <RootNamespace>PrintDemo</RootNamespace>
     <StartupObject>PrintDemo.Program</StartupObject>
@@ -36,21 +36,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Vintasoft.Imaging" Version="12.4.10.1" />
-    <PackageReference Include="Vintasoft.Imaging.Gdi" Version="12.4.10.1" />
-    <PackageReference Include="Vintasoft.Imaging.Annotation" Version="12.4.10.1" />
-    <PackageReference Include="Vintasoft.Imaging.Annotation.Pdf" Version="12.4.10.1" />
-    <PackageReference Include="Vintasoft.Imaging.Annotation.Pdf.UI" Version="12.4.10.1" />
-    <PackageReference Include="Vintasoft.Imaging.Annotation.UI" Version="12.4.10.1" />
-    <PackageReference Include="Vintasoft.Imaging.Dicom" Version="5.4.10.1" />
-    <PackageReference Include="Vintasoft.Imaging.Jbig2Codec" Version="9.4.10.1" />
-    <PackageReference Include="Vintasoft.Imaging.Jpeg2000Codec" Version="8.4.10.1" />
-    <PackageReference Include="Vintasoft.Imaging.Office.OpenXml" Version="4.4.10.1" />
-    <PackageReference Include="Vintasoft.Imaging.Pdf" Version="9.4.10.1" />
-    <PackageReference Include="Vintasoft.Imaging.Pdf.UI" Version="9.4.10.1" />
-    <PackageReference Include="Vintasoft.Imaging.RawCodec" Version="12.4.10.1" />
-    <PackageReference Include="Vintasoft.Imaging.UI" Version="12.4.10.1" />
-    <PackageReference Include="Vintasoft.Shared" Version="4.2.0.1" />
+    <PackageReference Include="Vintasoft.Imaging" Version="12.5.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Gdi" Version="12.5.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Annotation" Version="12.5.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Annotation.Pdf" Version="12.5.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Annotation.Pdf.UI" Version="12.5.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Annotation.UI" Version="12.5.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Dicom" Version="5.5.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Jbig2Codec" Version="9.5.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Jpeg2000Codec" Version="8.5.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Office.OpenXml" Version="4.5.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Pdf" Version="9.5.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Pdf.UI" Version="9.5.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.RawCodec" Version="12.5.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.UI" Version="12.5.0.1" />
+    <PackageReference Include="Vintasoft.Shared" Version="4.3.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomControls\PaddingFEditorControl.cs">
@@ -163,16 +163,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <AutoGen>True</AutoGen>
-    </Compile>
     <EmbeddedResource Include="CustomControls\PaddingFEditorControl.resx">
       <DependentUpon>PaddingFEditorControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,11 +204,6 @@
       <SubType>Designer</SubType>
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <SubType>Designer</SubType>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <Content Include="App.ico" />
     <Content Include="directives.txt" />
     <None Include="DefaultCMYK.icc">
@@ -226,10 +211,6 @@
     </None>
     <None Include="DefaultRGB.icc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
 </Project>
