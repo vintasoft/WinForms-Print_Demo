@@ -140,6 +140,8 @@ namespace PrintDemo
             // set CustomFontProgramsController for all opened documents
             CustomFontProgramsController.SetDefaultFontProgramsController();
 
+            DocumentPasswordForm.EnableAuthentication(thumbnailViewer1);
+
 #if !REMOVE_OFFICE_PLUGIN
             // specify image collection of thumbnail viewer must handle layout settings requests
             _imageCollectionDocxLayoutSettingsManager = new ImageCollectionDocxLayoutSettingsManager(thumbnailViewer1.Images);
@@ -149,8 +151,6 @@ namespace PrintDemo
 #if REMOVE_OFFICE_PLUGIN
             documentLayoutSettingsToolStripMenuItem.Visible = false;
 #endif
-
-            DocumentPasswordForm.EnableAuthentication(thumbnailViewer1);
 
             // initialize color management in viewer
             ColorManagementHelper.EnableColorManagement(thumbnailViewer1);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
@@ -78,6 +79,7 @@ namespace PrintDemo
         /// <summary>
         /// Gets or sets a value indicating whether the page header is shown.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ShowPageHeader
         {
             get
@@ -94,6 +96,7 @@ namespace PrintDemo
         /// <summary>
         /// Gets or sets a value indicating whether the page footer is shown.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ShowPageFooter
         {
             get
@@ -110,6 +113,7 @@ namespace PrintDemo
         /// <summary>
         /// Gets or sets a value indicating whether the image header is shown.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ShowImageHeader
         {
             get
@@ -126,6 +130,7 @@ namespace PrintDemo
         /// <summary>
         /// Gets or sets a value indicating whether the image footer is shown.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ShowImageFooter
         {
             get
@@ -142,6 +147,7 @@ namespace PrintDemo
         /// <summary>
         /// Gets or sets a value indicating whether the image rect is shown.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ShowImageRect
         {
             get
@@ -158,6 +164,7 @@ namespace PrintDemo
         /// <summary>
         /// Gets or sets default space between images, in hundredths of an inch.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int DefaultDistanceBetweenImages
         {
             get
