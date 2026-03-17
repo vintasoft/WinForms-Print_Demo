@@ -11,10 +11,10 @@ using Vintasoft.Imaging.ImageProcessing;
 using Vintasoft.Imaging.Print;
 using Vintasoft.Imaging.UI;
 
-using DemosCommonCode;
-using DemosCommonCode.Imaging.Codecs;
-using DemosCommonCode.Imaging.ColorManagement;
-using DemosCommonCode.Imaging;
+using CommonCode;
+using CommonCode.Imaging.Codecs;
+using CommonCode.Imaging.ColorManagement;
+using CommonCode.Imaging;
 
 namespace PrintDemo
 {
