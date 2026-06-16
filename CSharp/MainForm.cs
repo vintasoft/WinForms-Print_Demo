@@ -88,6 +88,21 @@ namespace PrintDemo
         #region Constructors
 
         /// <summary>
+        /// Initializes the <see cref="MainForm"/> class.
+        /// </summary>
+        static MainForm()
+        {
+            Jbig2AssemblyLoader.Load();
+            Jpeg2000AssemblyLoader.Load();
+            RawAssemblyLoader.Load();
+            DicomAssemblyLoader.Load();
+            DocxAssemblyLoader.Load();
+
+            // set CustomFontProgramsController for all opened documents
+            CustomFontProgramsController.SetDefaultFontProgramsController();
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="MainForm"/> class.
         /// </summary>
         public MainForm()
@@ -96,12 +111,6 @@ namespace PrintDemo
             Vintasoft.Imaging.ImagingGlobalSettings.Register("REG_USER", "REG_EMAIL", "EXPIRATION_DATE", "REG_CODE");
 
             InitializeComponent();
-
-            Jbig2AssemblyLoader.Load();
-            Jpeg2000AssemblyLoader.Load();
-            RawAssemblyLoader.Load();
-            DicomAssemblyLoader.Load();
-            DocxAssemblyLoader.Load();
 
             _imagePrintDocument = new CustomImagePrintDocument(thumbnailViewer1.AnnotationDataController);
             _imagePrintDocument.Center = false;
@@ -136,9 +145,6 @@ namespace PrintDemo
 
             thumbnailViewer1.Images.ImageCollectionChanged += new EventHandler<ImageCollectionChangeEventArgs>(thumbnailViewer1_Images_ImageCollectionChanged);
             thumbnailViewer1.AnnotationDataController.AnnotationDataDeserializationException += new EventHandler<Vintasoft.Imaging.Annotation.AnnotationDataDeserializationExceptionEventArgs>(thumbnailViewer1_AnnotationDataController_AnnotationDataDeserializationException);
-
-            // set CustomFontProgramsController for all opened documents
-            CustomFontProgramsController.SetDefaultFontProgramsController();
 
             DocumentPasswordForm.EnableAuthentication(thumbnailViewer1);
 
