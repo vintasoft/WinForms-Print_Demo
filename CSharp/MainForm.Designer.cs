@@ -29,7 +29,6 @@ namespace PrintDemo
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            Vintasoft.Imaging.Utils.WinFormsSystemClipboard winFormsSystemClipboard1 = new Vintasoft.Imaging.Utils.WinFormsSystemClipboard();
             Vintasoft.Imaging.UI.ThumbnailAppearance thumbnailAppearance1 = new Vintasoft.Imaging.UI.ThumbnailAppearance();
             Vintasoft.Imaging.UI.ThumbnailAppearance thumbnailAppearance2 = new Vintasoft.Imaging.UI.ThumbnailAppearance();
             Vintasoft.Imaging.UI.ThumbnailAppearance thumbnailAppearance3 = new Vintasoft.Imaging.UI.ThumbnailAppearance();
@@ -91,6 +90,8 @@ namespace PrintDemo
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.htmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.emailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.imagesPerPageGroupBox.SuspendLayout();
@@ -157,7 +158,9 @@ namespace PrintDemo
             // 
             this.documentLayoutSettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.docxLayoutSettingsToolStripMenuItem,
-            this.xlsxLayoutSettingsToolStripMenuItem});
+            this.xlsxLayoutSettingsToolStripMenuItem,
+            this.htmlToolStripMenuItem,
+            this.emailToolStripMenuItem});
             this.documentLayoutSettingsToolStripMenuItem.Name = "documentLayoutSettingsToolStripMenuItem";
             this.documentLayoutSettingsToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.documentLayoutSettingsToolStripMenuItem.Text = "Layout Settings...";
@@ -165,14 +168,14 @@ namespace PrintDemo
             // docxLayoutSettingsToolStripMenuItem
             // 
             this.docxLayoutSettingsToolStripMenuItem.Name = "docxLayoutSettingsToolStripMenuItem";
-            this.docxLayoutSettingsToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.docxLayoutSettingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.docxLayoutSettingsToolStripMenuItem.Text = "DOCX...";
             this.docxLayoutSettingsToolStripMenuItem.Click += new System.EventHandler(this.docxLayoutSettingsToolStripMenuItem_Click);
             // 
             // xlsxLayoutSettingsToolStripMenuItem
             // 
             this.xlsxLayoutSettingsToolStripMenuItem.Name = "xlsxLayoutSettingsToolStripMenuItem";
-            this.xlsxLayoutSettingsToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.xlsxLayoutSettingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.xlsxLayoutSettingsToolStripMenuItem.Text = "XLSX...";
             this.xlsxLayoutSettingsToolStripMenuItem.Click += new System.EventHandler(this.xlsxLayoutSettingsToolStripMenuItem_Click);
             // 
@@ -611,7 +614,6 @@ namespace PrintDemo
             // 
             this.thumbnailViewer1.AllowDrop = true;
             this.thumbnailViewer1.AutoScrollMinSize = new System.Drawing.Size(1, 1);
-            this.thumbnailViewer1.Clipboard = winFormsSystemClipboard1;
             this.thumbnailViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             thumbnailAppearance1.BackColor = System.Drawing.Color.Transparent;
             thumbnailAppearance1.BorderColor = System.Drawing.Color.Gray;
@@ -690,6 +692,20 @@ namespace PrintDemo
             this.printDialog1.AllowSelection = true;
             this.printDialog1.AllowSomePages = true;
             this.printDialog1.ShowNetwork = false;
+            // 
+            // htmlToolStripMenuItem
+            // 
+            this.htmlToolStripMenuItem.Name = "htmlToolStripMenuItem";
+            this.htmlToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.htmlToolStripMenuItem.Text = "HTML...";
+            this.htmlToolStripMenuItem.Click += new System.EventHandler(this.htmlToolStripMenuItem_Click);
+            // 
+            // emailToolStripMenuItem
+            // 
+            this.emailToolStripMenuItem.Name = "emailToolStripMenuItem";
+            this.emailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.emailToolStripMenuItem.Text = "Email...";
+            this.emailToolStripMenuItem.Click += new System.EventHandler(this.emailToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -783,5 +799,7 @@ namespace PrintDemo
         private System.Windows.Forms.ToolStripMenuItem docxLayoutSettingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xlsxLayoutSettingsToolStripMenuItem;
         private System.Windows.Forms.CheckBox imageAutoOrientationCheckBox;
+        private System.Windows.Forms.ToolStripMenuItem htmlToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem emailToolStripMenuItem;
     }
 }

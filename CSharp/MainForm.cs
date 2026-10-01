@@ -71,16 +71,6 @@ namespace PrintDemo
         /// </summary>
         ColorManagementDecodeSettings _printColorManagement;
 
-        /// <summary>
-        /// Manages the layout settings of DOCX document image collections.
-        /// </summary>
-        ImageCollectionDocxLayoutSettingsManager _imageCollectionDocxLayoutSettingsManager;
-
-        /// <summary>
-        /// Manages the layout settings of XLSX document image collections.
-        /// </summary>
-        ImageCollectionXlsxLayoutSettingsManager _imageCollectionXlsxLayoutSettingsManager;
-
         #endregion
 
 
@@ -97,9 +87,16 @@ namespace PrintDemo
             RawAssemblyLoader.Load();
             DicomAssemblyLoader.Load();
             DocxAssemblyLoader.Load();
+            EmailCodecAssemblyLoader.Load();    
 
             // set CustomFontProgramsController for all opened documents
             CustomFontProgramsController.SetDefaultFontProgramsController();
+
+            // set default layout settings of HTML and Email codecs
+            HtmlLayoutSettings.DefaultHtmlSettings.PageLayoutSettings.PageSize = ImageSize.FromPaperKind(PaperSizeKind.A4);
+#if !REMOVE_EMAIL_CODEC
+            EmailLayoutSettings.DefaultEmailSettings.PageLayoutSettings.PageSize = ImageSize.FromPaperKind(PaperSizeKind.A4);
+#endif
         }
 
         /// <summary>
@@ -148,11 +145,6 @@ namespace PrintDemo
 
             DocumentPasswordForm.EnableAuthentication(thumbnailViewer1);
 
-#if !REMOVE_OFFICE_PLUGIN
-            // specify image collection of thumbnail viewer must handle layout settings requests
-            _imageCollectionDocxLayoutSettingsManager = new ImageCollectionDocxLayoutSettingsManager(thumbnailViewer1.Images);
-            _imageCollectionXlsxLayoutSettingsManager = new ImageCollectionXlsxLayoutSettingsManager(thumbnailViewer1.Images);
-#endif
 
 #if REMOVE_OFFICE_PLUGIN
             documentLayoutSettingsToolStripMenuItem.Visible = false;
@@ -161,13 +153,11 @@ namespace PrintDemo
             // initialize color management in viewer
             ColorManagementHelper.EnableColorManagement(thumbnailViewer1);
 
-            imageAutoOrientationCheckBox.Checked = _imagePrintDocument.UseImageAutoOrienation;
+            imageAutoOrientationCheckBox.Checked = _imagePrintDocument.UseImageAutoOrientation;
 
             // update the UI
             UpdateUI();
         }
-
-
 
         #endregion
 
@@ -286,7 +276,11 @@ namespace PrintDemo
         /// </summary>
         private void docxLayoutSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _imageCollectionDocxLayoutSettingsManager.EditLayoutSettingsUseDialog();
+#if !REMOVE_OFFICE_PLUGIN            
+            // create dialog with necessary layout settings
+            using (DocumentLayoutSettingsDialog dialog = new DocxLayoutSettingsDialog(thumbnailViewer1.Images))
+                dialog.ShowDialog();
+#endif
         }
 
         /// <summary>
@@ -294,7 +288,33 @@ namespace PrintDemo
         /// </summary>
         private void xlsxLayoutSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _imageCollectionXlsxLayoutSettingsManager.EditLayoutSettingsUseDialog();
+#if !REMOVE_OFFICE_PLUGIN            
+            // create dialog with necessary layout settings
+            using (DocumentLayoutSettingsDialog dialog = new XlsxLayoutSettingsDialog(thumbnailViewer1.Images))
+                dialog.ShowDialog();
+#endif
+        }
+
+        /// <summary>
+        /// Handles the Click event of htmlToolStripMenuItem object.
+        /// </summary>
+        private void htmlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // create dialog with necessary layout settings
+            using (DocumentLayoutSettingsDialog dialog = new HtmlLayoutSettingsDialog(thumbnailViewer1.Images))
+                dialog.ShowDialog();
+        }
+
+        /// <summary>
+        /// Handles the Click event of emailToolStripMenuItem object.
+        /// </summary>
+        private void emailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+#if !REMOVE_EMAIL_CODEC
+            // create dialog with necessary layout settings
+            using (DocumentLayoutSettingsDialog dialog = new EmailLayoutSettingsDialog(thumbnailViewer1.Images))
+                dialog.ShowDialog();
+#endif
         }
 
         /// <summary>
@@ -541,7 +561,7 @@ namespace PrintDemo
         private void imageAutoOrientationCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             // enable/disable centering of image on page
-            _imagePrintDocument.UseImageAutoOrienation = imageAutoOrientationCheckBox.Checked;
+            _imagePrintDocument.UseImageAutoOrientation = imageAutoOrientationCheckBox.Checked;
 
             printPreviewControl1.InvalidatePreview();
         }
@@ -935,12 +955,13 @@ namespace PrintDemo
                 image.DecodingSettings.ColorManagement = colorManagementSettings;
         }
 
-        #endregion
 
         #endregion
 
         #endregion
 
-     
+        #endregion
+
+    
     }
 }
